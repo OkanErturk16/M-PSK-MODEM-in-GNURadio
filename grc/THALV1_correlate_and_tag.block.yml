@@ -1,0 +1,55 @@
+id: THALV1_correlate_and_tag
+label: correlate_and_tag
+category: '[THALV1]'
+
+templates:
+  imports: import THALV1
+  make: THALV1.correlate_and_tag(${n_frame_sync},${n_data},${threshold})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as \$keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+parameters:
+- id: n_frame_sync
+  label: n_frame_sync
+  dtype: int
+- id: n_data
+  label: n_data
+  dtype: int
+- id: threshold
+  label: threshold
+  dtype: float
+# - id: ...
+#   label: ...
+#   dtype: ...
+
+#  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
+#  Keys include:
+#      * label (an identifier for the GUI)
+#      * domain (optional - stream or message. Default is stream)
+#      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#      * vlen (optional - data stream vector length. Default is 1)
+#      * optional (optional - set to 1 for optional inputs. Default is 0)
+inputs:
+- label: in
+  # domain: ...
+  dtype: complex
+  # vlen: ...
+  # optional: ...
+
+outputs:
+- label: out
+  # domain: 
+  dtype: complex
+  # vlen: ...
+  # optional: ...
+- label: out2
+  # domain: 
+  dtype: complex
+  # vlen: ...
+  # optional: ...
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

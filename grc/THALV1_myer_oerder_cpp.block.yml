@@ -1,0 +1,43 @@
+id: THALV1_myer_oerder_cpp
+label: myer_oerder_cpp
+category: '[THALV1]'
+
+templates:
+  imports: import THALV1
+  make: THALV1.myer_oerder_cpp(${os}, ${n_symbol})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as \$keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+parameters:
+- id: os
+  label: os
+  dtype: int
+- id: n_symbol
+  label: n_symbol
+  dtype: int
+
+#  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
+#  Keys include:
+#      * label (an identifier for the GUI)
+#      * domain (optional - stream or message. Default is stream)
+#      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#      * vlen (optional - data stream vector length. Default is 1)
+#      * optional (optional - set to 1 for optional inputs. Default is 0)
+inputs:
+- label: in
+  # domain: ...
+  dtype: complex
+  # vlen: ...
+  # optional: ...
+
+outputs:
+- label: out
+  # domain: 
+  dtype: complex
+  # vlen: ...
+  # optional: ...
+file_format: 1
+
