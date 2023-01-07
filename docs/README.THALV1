@@ -4,8 +4,8 @@ is in 'THALV1', which is imported as:
 
     import THALV1
 
-See the Doxygen documentation for details about the blocks available
-in this package. A quick listing of the details can be found in Python
-after importing by using:
-
-    help(THALV1)
+The GNURadio project is given the folder "GR_MPSK".
+The project can be run  both in host as well as over the USRP devices.
+The development process is ongoing, right now. Therefore, the content will be updated in future.
+It is validated that it is working at the rate of 5 Msamples/sec in a computer with 8 GB RAM and third generation CPU from Intel.
+Example screen-shoot of the project is given in the "Pics" folder.
